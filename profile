@@ -20,15 +20,9 @@ export PS1='\h:\W$(__git_ps1 "(%s)") \u\$ '
 export EDITOR="mate -w"
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-export HADOOP_HOME=/Users/michaeljones/src/hadoop-0.20.1
  
-export PATH=$HADOOP_HOME/bin:$PATH
-
-# add mysql & mongo to path
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mongodb/bin:/usr/local/mysql/bin:$PATH"
-
 function authme { 
-ssh $1 'cat >>~/.ssh/authorized_keys' <~/.ssh/id_dsa.pub 
+ssh $1 'cat >>~/.ssh/authorized_keys' <~/.ssh/id_rsa.pub 
 }
 
 _mategem()
@@ -42,6 +36,6 @@ _mategem()
 }
 complete -F _mategem -o dirnames mategem
 
-if [[ -s /Users/michaeljones/.rvm/scripts/rvm ]] ; then source /Users/michaeljones/.rvm/scripts/rvm ; fi
+if [[ -s /Users/paul/.rvm/scripts/rvm ]] ; then source /Users/paul/.rvm/scripts/rvm ; fi
 
-
+export CLASSPATH="/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar:$CLASSPATH"

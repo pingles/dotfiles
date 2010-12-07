@@ -68,7 +68,7 @@ imap <D-/> <C-O>,c<Space>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
 
 " clojure stuff, needs to be rebuild for each of the machines installed on
-let vimclojure#NailgunClient = "/Users/michaeljones/src/vimclojure/ng"
+let vimclojure#NailgunClient = "/Users/paul/src/vimclojure/ng"
 let clj_want_gorilla = 1
 
 " Execute open rspec buffer
